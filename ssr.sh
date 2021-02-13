@@ -43,7 +43,7 @@ server {
 EOF
 ln -s /etc/nginx/sites-available/ssl /etc/nginx/sites-enabled/
 
-apt-get install shadowsocks-libev
+apt-get -y install shadowsocks-libev
 wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.2.0/v2ray-plugin-linux-amd64-v1.2.0.tar.gz
 tar -xzvf v2ray-plugin-linux-amd64-v1.2.0.tar.gz
 mv v2ray-plugin_linux_amd64 /usr/bin/v2ray-plugin
