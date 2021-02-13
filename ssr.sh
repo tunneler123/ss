@@ -9,6 +9,7 @@ fi
 do_name=$1
 
 apt-get update && apt-get -y upgrade
+mkdir /etc/v2ray
 apt-get -y install nginx socat
 hostnamectl set-hostname $do_name
 curl https://get.acme.sh | sh
@@ -42,7 +43,7 @@ server {
 EOF
 ln -s /etc/nginx/sites-available/ssl /etc/nginx/sites-enabled/
 
-install shadowsocks-libev
+apt-get install shadowsocks-libev
 wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.2.0/v2ray-plugin-linux-amd64-v1.2.0.tar.gz
 tar -xzvf v2ray-plugin-linux-amd64-v1.2.0.tar.gz
 mv v2ray-plugin_linux_amd64 /usr/bin/v2ray-plugin
