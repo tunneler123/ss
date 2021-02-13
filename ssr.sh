@@ -66,6 +66,6 @@ systemctl restart nginx
 systemctl enable nginx
 systemctl restart shadowsocks-libev
 systemctl enable shadowsocks-libev
-netstat -lntp
-echo "done, enjoy!"
+clear
+echo "ENJOY, THIS IS PHTUNNELER"
 
