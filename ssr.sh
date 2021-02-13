@@ -56,7 +56,6 @@ cat <<EOF >>/etc/shadowsocks-libev/config.json
     "server_port":8089,
     "local_port":1080,
     "password":"tunneler123",
-    "timeout":60,
     "method":"aes-256-gcm",
     "plugin":"v2ray-plugin",
     "plugin_opts":"server;loglevel=none"
