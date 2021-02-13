@@ -48,6 +48,7 @@ wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.2.0/v2ray-
 tar -xzvf v2ray-plugin-linux-amd64-v1.2.0.tar.gz
 mv v2ray-plugin_linux_amd64 /usr/bin/v2ray-plugin
 rm -rf v2ray-plugin-linux-amd64-v1.2.0.tar.gz
+rm /etc/shadowsocks-libev/config.json
 cat <<EOF >>/etc/shadowsocks-libev/config.json
 {
     "server":["::1", "127.0.0.1"],
