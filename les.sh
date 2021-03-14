@@ -46,40 +46,13 @@ curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install
 curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh
 bash install-release.sh
 bash install-dat-release.sh
-cat <<EOF >>/usr/local/etc/v2ray/config.json
-{
-  "inbounds": [
-    {
-      "port": 8089,
-      "listen":"127.0.0.1",
-      "protocol": "vless",
-      "settings": {
-        "decryption": "none",
-        "clients": [
-          {
-            "id": "ad136a60-af16-4635-89b1-60ef6b899253",
-            "level": 0
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-        }
-      }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "settings": {}
-    }
-  ]
-}{}
-EOF
+wget -O usr/local/etc/v2ray/config.json https://raw.githubusercontent.com/tunneler123/openvpn/master/config.json
 systemctl restart nginx
 systemctl enable nginx
 sudo systemctl restart v2ray
 systemctl enable v2ray
 clear
 echo "ENJOY, THIS IS PHTUNNELER"
+echo protocol: vless
+echo ID : ad136a60-af16-4635-89b1-60ef6b899253
+echo PORT : 443
