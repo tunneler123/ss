@@ -1,21 +1,21 @@
 #!/bin/bash
-set -e
+#set -e
 
-if [ $# -ne 1 ]; then
+#if [ $# -ne 1 ]; then
 	echo "Usage: $0 domain_name" >&2
 	exit 1
-fi
+#fi
 
-do_name=$1
+#do_name=$1
 
 apt-get update && apt-get -y upgrade
 mkdir /etc/v2ray
 apt-get -y install nginx socat
-hostnamectl set-hostname $do_name
+hostnamectl set-hostname $do_name$none
 curl https://get.acme.sh | sh
 systemctl stop nginx
-~/.acme.sh/acme.sh --issue -d $do_name --standalone -k ec-256
-~/.acme.sh/acme.sh --installcert -d $do_name --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc
+~/.acme.sh/acme.sh --issue -d $do_name$none --standalone -k ec-256
+~/.acme.sh/acme.sh --installcert -d $do_name$none --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc
 cat <<EOF >>/etc/nginx/sites-available/ssl
 server {
     listen 443 ssl default_server;
