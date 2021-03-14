@@ -53,7 +53,8 @@ systemctl enable nginx
 sudo systemctl restart v2ray
 systemctl enable v2ray
 clear
-echo "ENJOY, THIS IS PHTUNNELER"
-echo protocol: vless
-echo ID : ad136a60-af16-4635-89b1-60ef6b899253
-echo PORT : 443
+echo -e "\e[1;31m THIS IS PHTUNNELER \e[0m"
+echo -e "\e[1;31m protocol: vless \e[0m"
+echo -e "\e[1;31m ID : ad136a60-af16-4635-89b1-60ef6b899253 \e[0m"
+echo -e "\e[1;31m PORT : 443 \e[0m"
+
