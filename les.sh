@@ -54,7 +54,7 @@ sudo systemctl restart v2ray
 systemctl enable v2ray
 clear
 echo -e "\e[1;31m THIS IS PHTUNNELER \e[0m"
-echo -e "\e[1;31m protocol: vmess \e[0m"
-echo -e "\e[1;31m ID : ba40daaa-d36b-4e23-b026-b9665f544375 \e[0m"
+echo -e "\e[1;31m protocol: vless \e[0m"
+echo -e "\e[1;31m ID : -d36b-4e23-b026-b9665f544375 \e[0m"
 echo -e "\e[1;31m PORT : 443 \e[0m"
 
