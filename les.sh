@@ -47,7 +47,7 @@ curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install
 bash install-release.sh
 bash install-dat-release.sh
 wget https://raw.githubusercontent.com/tunneler123/openvpn/master/config.json
-cp config.json /usr/local/etc/v2ray/config.json
+cp config.json /usr/local/etc/v2ray/conig.json
 systemctl restart nginx
 systemctl enable nginx
 sudo systemctl restart v2ray
