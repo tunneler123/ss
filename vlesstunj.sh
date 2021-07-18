@@ -14,7 +14,7 @@ apt-get -y install nginx socat
 hostnamectl set-hostname $do_name
 curl https://get.acme.sh | sh
 systemctl stop nginx
-~/.acme.sh/acme.sh --issue --register-account -m example@example.org -d $do_name --standalone -k ec-256
+~/.acme.sh/acme.sh --register-account -m example@example.org --issue -d $do_name --standalone -k ec-256
 ~/.acme.sh/acme.sh --installcert -d $do_name --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc
 cat <<EOF >>/etc/nginx/sites-available/ssl
 server {
