@@ -1,10 +1,10 @@
 apt-get update
 atp-get upgrade -y
 apt-get -y install shadowsocks-libev -y
-wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.2.0/v2ray-plugin-linux-amd64-v1.2.0.tar.gz
-tar -xzvf v2ray-plugin-linux-amd64-v1.2.0.tar.gz
-mv v2ray-plugin_linux_amd64 /usr/bin/v2ray-plugin
-rm -rf v2ray-plugin-linux-amd64-v1.2.0.tar.gz
+wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.3.1/v2ray-plugin-darwin-amd64-v1.3.1.tar.gz
+tar -xzvf v2ray-plugin-darwin-amd64-v1.3.1.tar.gz
+mv v2ray-plugin_darwin_amd64 /usr/bin/v2ray-plugin
+rm -rf v2ray-plugin-darwin-amd64-v1.3.1.tar.gz
 rm /etc/shadowsocks-libev/config.json
 cat <<EOF >>/etc/shadowsocks-libev/config.json
 {
