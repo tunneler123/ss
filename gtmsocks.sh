@@ -18,5 +18,14 @@ cat <<EOF >>/etc/shadowsocks-libev/config.json
 EOF
 systemctl restart shadowsocks-libev
 systemctl enable shadowsocks-libev
+cd /usr/bin
+cat <<EOF >>status
+service shadowsocks-libev status
+EOF
+cat <<EOF >>remove
+sudo apt-get remove shadowsocks-libev -y
+EOF
+chmod +x status
+chmod +x remove
 clear
 echo "ENJOY, THIS IS PHTUNNELER"
